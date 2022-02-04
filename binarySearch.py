@@ -22,24 +22,36 @@ nums 的每个元素都将在 [-9999, 9999]之间。
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/binary-search
 """
+from ctypes.wintypes import tagRECT
 from typing import List
+from wsgiref.simple_server import demo_app
 
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         """
         解法要点：
-        • 初始、结束状态定义。
         • 程序的迭代过程。
+        • 初始、结束状态定义。
+        • 输入的数列nums必须是有序的，不能重复。
+        • 每次迭代搜索范围要分清楚，分为：全闭和半开两种解法
+        通过left 和 right指针迭代，求接。
         """
 
         left, right = 0, len(nums)-1
         while left <= right:
-            middle = (left+right)/2
+            middle = (left+right)//2
             if nums[middle] < target:
                 left = middle + 1
-            if target < nums[middle]:
+            elif target < nums[middle]:
                 right = middle - 1
             else:
                 return middle
         return -1
+
+
+demo = Solution()
+mylist = [-1, 0, 3, 5, 9, 12]
+a = 9
+result = demo.search(mylist, a)
+print(result)
