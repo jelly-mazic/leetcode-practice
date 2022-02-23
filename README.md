@@ -2,7 +2,14 @@
 
 记录leetcode学习过程。
 
-### 二分查找 binarySearch
+### summary
+
+创建一维矩阵
+
+```python
+# [-1,-1,-1]
+matrix = [-1]*3
+```
 
 python运算符
 

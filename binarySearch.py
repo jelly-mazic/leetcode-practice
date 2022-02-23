@@ -35,7 +35,7 @@ class Solution:
         • 初始、结束状态定义。
         • 输入的数列nums必须是有序的，不能重复。
         • 每次迭代搜索范围要分清楚，分为：全闭和半开两种解法
-        通过left 和 right指针迭代，求接。
+        通过left 和 right指针迭代，求解。
         """
 
         left, right = 0, len(nums)-1
