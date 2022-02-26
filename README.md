@@ -4,6 +4,18 @@
 
 ### summary
 
+```
+# for循环
+for j in range(size):
+```
+
+python运输符
+
+```
+# python没有&，a 和b
+a and b
+```
+
 创建一维矩阵
 
 ```python
